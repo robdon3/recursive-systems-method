@@ -54,11 +54,12 @@ How the method actually works in practice:
 
 ## Operating This Method
 
-See:
-- `/primitives/` — Detailed definitions of each building block
-- `/agents/` — Instructions and role definitions
-- `/templates/` — Schemas for capturing work in standard forms
-- `/cases/` — Live projects where the method is actually applied
+Planned directories, not in this repository yet:
+
+- **Primitives** — detailed definitions of each building block
+- **Agents** — instructions and role definitions
+- **Templates** — schemas for capturing work in standard forms
+- **Cases** — live projects where the method is applied
 
 The method is alive only when it is in use. The strongest signal that it needs to change is when someone applying it carefully discovers that it has no way to preserve something that matters.
 
