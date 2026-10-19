@@ -1,24 +1,18 @@
 # The Recursive Systems Method
 
-A method for thinking, investigating, building, and orchestrating with AI.
+A written method for thinking, investigating, building, and orchestrating with AI.
 
-The Recursive Systems Method begins with a desired end state and recursively
-descends through the systems preventing that state from being true.
+The Recursive Systems Method begins with a desired end state and recursively descends through the systems preventing that state from being true. Each descent produces evidence. Each discovery changes the map. The end state remains visible throughout.
 
-Each descent produces evidence.
+The process continues until the problem becomes sufficiently structured to cross a **Tool Threshold**: the point at which a specialized tool, agent, model, or human capability becomes the appropriate next intelligence to receive it. The work is then handed off without losing state, evidence, constraints, or intent.
 
-Each discovery changes the map.
+There is no application to install. The method is the documents below.
 
-The end state remains visible throughout.
+## Problem
 
-The process continues until the problem becomes sufficiently structured to
-cross a **Tool Threshold**: the point at which a specialized tool, agent, model,
-or human capability becomes the appropriate next intelligence to receive it.
+Serious work loses the goal, the evidence, or the reason a tool was chosen when it moves between people and models. The method keeps those explicit.
 
-The work is then handed off without losing state, evidence, constraints, or
-intent.
-
-## The Core Loop
+## The core loop
 
 ```text
                       END STATE
@@ -39,28 +33,24 @@ BEGIN → OBSERVE → DESCEND → DISCOVER
                           │
                           ▼
                        HANDOFF
-                          │
-                          ▼
-                   NEW CAPABILITY
-                          │
-                          └────→ END STATE
 ```
 
-This is not a circle.
+This is a spiral, not a closed circle. The same question can return, at higher resolution.
 
-It is a spiral.
+## How the documents fit
 
-The system may return to the same question repeatedly, but each return occurs
-with greater resolution.
+| File | What it holds |
+| --- | --- |
+| This README | Loop, evidence rules, tool threshold, one narrative case |
+| [METHOD.md](METHOD.md) | Primitives, roles, and operative disciplines |
+| [AGENTS.md](AGENTS.md) | Explorer, Builder, Critic, Validator, and State Keeper: purpose, authority, and limits |
+| [MANIFESTO.md](MANIFESTO.md) | The method is updated from use, not finished in isolation |
 
-## First Principle
+`METHOD.md` lists primitives, agents, templates, and cases as planned directories. They are not in this repository.
 
-> Begin with what should be true. Descend until you discover why it is not
-> true. Let each discovery revise the map without surrendering the end state.
-> Continue until the problem crosses a tool threshold. Hand it to the right
-> intelligence, preserve what it learns, and climb back toward the whole.
+No agent owns the end state. Human judgment stays on intent, tradeoffs, and consequential decisions. Tools supply local exploration, implementation, criticism, and state preservation.
 
-## Evidence Discipline
+## Evidence discipline
 
 Every serious investigation separates:
 
@@ -70,120 +60,16 @@ Every serious investigation separates:
 - **Unknown** — information still required
 - **Disproved** — explanations contradicted by evidence
 
-A hypothesis does not become a fact because it is useful, exciting, or likely.
+A hypothesis does not become a fact because it is useful.
 
-## The Tool Threshold
+## Case study in this repo
 
-A Tool Threshold occurs when a problem has become the right shape for another
-tool.
+The first written case is the reverse engineering of an Anker A8392 USB-C dock, told in this README rather than as a code folder. The starting goal was to make three physical monitors behave as one logical display through one cable. The descent runs from the user requirement through macOS display behavior, MST, USB-C / DisplayPort Alt Mode, the dock controller, the firmware package, Synaptics VMM, ViewExpand, HID transport, DisplayPort AUX, GPU-specific Windows APIs, and binary reverse engineering. The point of the case is how the tool changed as the problem changed shape.
 
-```text
-Vague problem
-    ↓
-exploration
-    ↓
-system boundaries identified
-    ↓
-specific artifacts / interfaces / questions
-    ↓
----------------------
-    TOOL THRESHOLD
----------------------
-    ↓
-specialized intelligence
-```
+## Read
 
-Tool choice is therefore not merely a prerequisite to reasoning.
+Start with this file, then `METHOD.md` and `AGENTS.md`. Nothing to build or run.
 
-**Tool selection can itself be an output of reasoning.**
+## Tech
 
-## Human and Machine Roles
-
-The human retains:
-
-- intent
-- end-state judgment
-- tradeoffs
-- consequential decisions
-- interpretation of what matters
-
-AI and other tools provide:
-
-- local expertise
-- exploration
-- implementation
-- testing
-- criticism
-- documentation
-- state preservation
-
-The objective is not to remove the human from the system.
-
-It is to increase the depth through which human intent can propagate.
-
-## Case Study 001
-
-The first live case study is the reverse engineering of an Anker A8392 USB-C
-dock.
-
-The initial objective was simple:
-
-> Make three physical monitors behave as one logical display through one cable.
-
-The investigation descended through:
-
-```text
-user requirement
-→ macOS display behavior
-→ MST
-→ USB-C / DisplayPort Alt Mode
-→ dock controller
-→ firmware package
-→ Synaptics VMM
-→ ViewExpand
-→ HID transport
-→ DisplayPort AUX
-→ GPU-specific Windows APIs
-→ binary reverse engineering
-```
-
-The important artifact is not merely whether the dock is ultimately modified.
-
-The case records how an initially vague physical goal became a precise
-technical investigation and how the appropriate tools changed as the problem
-changed shape.
-
-## Status
-
-This method is being developed through use.
-
-The framework should evolve when real projects expose weaknesses in it.
-
-When the system fails to preserve something important, the response should not
-only be to remember better next time.
-
-**The missing behavior should be encoded into the system.**
-
-## Development Philosophy
-
-> We do not invent this methodology in isolation and then try to use it. We build it by extracting rules from actual work.
-
-The case studies in this repository are not examples we add later. They are the fossil record of the method being born.
-
-Every time a project exposes a flaw—poor state retention, bad evidence discipline, premature tool selection, agent duplication, unclear authority—we modify the framework itself.
-
-The repository evolves as:
-
-```text
-your way of thinking
-        ↓
-explicit principles
-        ↓
-files and schemas
-        ↓
-agent instructions
-        ↓
-software
-        ↓
-orchestration environment
-```
+Markdown.
